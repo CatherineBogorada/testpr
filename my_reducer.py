@@ -1,10 +1,12 @@
+#! /usr/bin/env python
+
 import sys
 prev_key = None
 values = []
 
 def print_res(key, values):
     sum_cnt = sum(values)
-    print("%s\t1%d" % (key,sum_cnt) )
+    print >>sys.stdout,"%s\t%d" % (key,sum_cnt) 
 
 for line in sys.stdin:
     key, value = line.strip().split("\t")
